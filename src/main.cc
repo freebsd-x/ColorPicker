@@ -75,10 +75,10 @@ int main(int /*argc*/, char* /*argv*/[]) {
 
     auto cp_hex_lbl = std::make_shared<TextWidget>("#33AADA", 18.0f);
     cp_hex_lbl->setFontWeight(600);
-    cp_hex_lbl->setColor(Color{1.0f, 1.0f, 1.0f, 1.0f});
+    // No colour of its own: xkit picks white or black, whichever reads on the
+    // swatch behind it (white was unreadable on light colours).
 
     auto cp_rgb_lbl = std::make_shared<TextWidget>("rgb(51, 170, 218)", 11.0f);
-    cp_rgb_lbl->setColor(Color{0.85f, 0.85f, 0.85f, 1.0f});
 
     // ── Slider labels ─────────────────────────────────────────────────────────
     auto cp_h_lbl = std::make_shared<TextWidget>("H: 200°", 11.0f);
